@@ -16,7 +16,7 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+
     color: white;
     display: flex; /* Enable Flexbox */
     justify-content: center; /* Center horizontally */
