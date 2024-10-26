@@ -41,7 +41,6 @@ h1 {
 
 
 body {
-    background-image: url('kay.jpg');
     background-size: cover; /* Ensures the image covers the entire screen */
     background-position: center;
     background-attachment: fixed;
