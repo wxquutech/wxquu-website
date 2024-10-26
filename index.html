@@ -10,23 +10,5 @@
     
     <div class="social-media">
     </div>
-    <audio id="background-audio" loop>
-        <source src="hahaha.wav" type="audio/wav">
-        Your browser does not support the audio element.
-    </audio>
-
-    <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            var audio = document.getElementById('background-audio');
-            audio.volume = 0.4;  // Set volume to 40%
-            
-            var playAudio = function() {
-                audio.play().catch(error => {
-                    console.log('Autoplay prevented');
-                });
-            };
-            playAudio();
-        });
-    </script>
 </body>
 </html>
