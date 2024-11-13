@@ -3,16 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MagyarKalandok's Official Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>School Assignment</title>
+    <style>
+         #controls {
+            margin-bottom: 20px;
+        }
+        input[type="number"] {
+            width: 80px;
+            margin-right: 10px;
+        }
+        button {
+            margin-left: 10px;
+        }
+        iframe {
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>we are <span class="highlight">BACK</span>.</h1>
-    <div class="video-container">
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/7pchsxpCbJk?si=l-dHcRV-00NVhcc1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+    <h1>School Assignment</h1>
+    <p>This is an interactive activity. Use it responsibly for your research.</p>
+    <div id="controls">
+        <label for="width">Width:</label>
+        <input type="number" id="width" placeholder="e.g., 800" min="100">
+        
+        <label for="height">Height:</label>
+        <input type="number" id="height" placeholder="e.g., 600" min="100">
+        
+        <button onclick="resizeIframe()">Resize</button>
     </div>
-    <p class="footer">MagyarKalandok's Official Website</p>
+    <iframe src="proxy.html" width="100%" height="800"></iframe>
+    <script>
+         function resizeIframe() {
+            // Get the width and height values from the input fields
+            const width = document.getElementById('width').value;
+            const height = document.getElementById('height').value;
+            const iframe = document.getElementById('game-iframe');
+
+            // Check if the values are valid numbers before applying them
+            if (width && height) {
+                // Set the iframe's actual width and height attributes
+                iframe.setAttribute("width", width);
+                iframe.setAttribute("height", height);
+            } else {
+                alert("Please enter valid width and height values.");
+            }
+        }
+    </script>
 </body>
 </html>
